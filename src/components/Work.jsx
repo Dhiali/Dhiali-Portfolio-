@@ -6,7 +6,7 @@ const categories = [
     id: '1',
     title: 'UX',
     subtitle: 'DESIGN',
-    description: 'USER-CENTERED DESIGN SOLUTIONS BLENDING TRADITIONAL INDIAN AESTHETICS WITH MODERN DIGITAL EXPERIENCES. FOCUSING ON INTUITIVE INTERFACES, CULTURAL STORYTELLING, AND HUMAN-CENTERED INNOVATION.',
+    description: 'Welcome to my UX case studies. Here, I break down my design process for each project, highlighting how I use research to inform design decisions, create prototypes to test ideas, and iterate based on feedback.I\'m passionate about creating products that users love and that meet business objectives. Explore the case studies to see how I\'ve achieved this in various contexts.',
     image: 'https://images.unsplash.com/photo-1521391406205-4a6af174a4c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxVWCUyMGRlc2lnbmVyJTIwd29ya3NwYWNlfGVufDF8fHx8MTc1OTkwMjQ5Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     label: 'CATEGORY 01',
     index: '01',
@@ -245,7 +245,7 @@ export function Work({ onNavigate }) {
   return (
     <section
       id="work"
-      className="relative bg-background"
+      className="relative bg-background pt-24 sm:pt-32 md:pt-40 lg:pt-48"
     >
       {categories.map((category) => (
         <CategoryCover 

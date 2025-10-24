@@ -152,34 +152,6 @@ export function Header() {
                   </motion.div>
                 ))}
               </nav>
-
-              {/* Contact info at bottom */}
-              <motion.div
-                className="absolute bottom-12 left-0 right-0 px-8 sm:px-12"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-              >
-                <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-0 text-sm sm:text-base tracking-wider text-muted-foreground">
-                  <motion.a 
-                    href="mailto:hello@dhiali.com"
-                    className="hover:text-primary transition-colors"
-                    whileHover={{ x: 5 }}
-                  >
-                    HELLO@DHIALI.COM
-                  </motion.a>
-                  <motion.a 
-                    href="https://www.instagram.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors"
-                    whileHover={{ x: 5 }}
-                  >
-                    @Dhiali
-                  </motion.a>
-                </div>
-              </motion.div>
             </div>
           </motion.div>
         )}

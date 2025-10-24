@@ -11,12 +11,12 @@ export function Hero() {
 
   const opacity = useTransform(
     scrollYProgress,
-    [0, 0.5],
+    [0.1, 0.5],
     [1, 0],
   );
   const scale = useTransform(
     scrollYProgress,
-    [0, 0.5],
+    [0.1, 0.5],
     [1, 0.8],
   );
   const imageY = useTransform(
@@ -43,7 +43,10 @@ export function Hero() {
       {/* Main content */}
       <motion.div
         className="relative z-10 w-full h-full flex items-center justify-center px-4 sm:px-6 lg:px-8"
-        style={{ opacity, scale }}
+        style={{ 
+          opacity: useTransform(scrollYProgress, [0.15, 0.5], [1, 0]),
+          scale: useTransform(scrollYProgress, [0.15, 0.5], [1, 0.8])
+        }}
       >
         <div className="relative w-full max-w-7xl mx-auto">
           {/* Container for stacked text and image */}
@@ -160,6 +163,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
+        style={{ opacity: useTransform(scrollYProgress, [0.15, 0.5], [1, 0]) }}
       >
         <motion.div
           animate={{

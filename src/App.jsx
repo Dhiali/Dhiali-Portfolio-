@@ -14,8 +14,7 @@ import { PersonalWork } from './components/PersonalWork';
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [showSplash, setShowSplash] = useState(true);
-  const carouselWords1 = ['UX DESIGN', 'FRONTEND DEVELOPMENT', 'CREATIVE CODING', 'USER RESEARCH'];
-  const carouselWords2 = ['CULTURAL DESIGN', 'INNOVATION', 'STORYTELLING', 'DIGITAL EXPERIENCES'];
+  const carouselWords = ['UX DESIGN', 'FRONTEND DEVELOPMENT', 'CREATIVE CODING', 'USER RESEARCH', 'CULTURAL DESIGN', 'INNOVATION', 'STORYTELLING', 'DIGITAL EXPERIENCES'];
 
   const handleNavigate = (route) => {
     setCurrentPage(route);
@@ -50,11 +49,10 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <WordCarousel words={carouselWords1} direction="left" speed={45} />
         <PromiseLand />
-        <WordCarousel words={carouselWords2} direction="right" speed={45} />
         <Work onNavigate={handleNavigate} />
         <Contact />
+        <WordCarousel words={carouselWords} direction="right" speed={45} />
       </main>
       <Footer />
     </div>
