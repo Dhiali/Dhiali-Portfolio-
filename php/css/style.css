@@ -1,0 +1,562 @@
+/* Waybill Manager Styles */
+.pod-upload-form {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    margin: 0;
+    display: inline-block;
+}
+
+.pod-upload-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.pod-upload-form input[type="file"] {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 300px;
+}
+
+.pod-upload-form button {
+    background: #0073aa;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.pod-upload-form button:hover {
+    background: #005177;
+}
+
+.upload-status {
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+.upload-status img {
+    max-width: 300px;
+    height: auto;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.upload-status.loading {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.upload-status.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.upload-status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.upload-status .spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.upload-status .close-message {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 5px;
+    line-height: 1;
+}
+
+.current-pod {
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.current-pod img {
+    max-width: 300px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.details-grid .label {
+    font-weight: bold;
+    color: #666;
+}
+
+.details-grid .value {
+    color: #333;
+}
+
+/* Button styles */
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#fresh-waybill-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+#fresh-waybill-btn:hover {
+    background-color: #218838;
+}
+
+#save-success-message {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Success Message Styles */
+#save-success-message {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+#save-success-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#save-success-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Remove any conflicting error message styles */
+.notice.notice-error {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.upload-notification {
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 4px;
+    display: none;
+}
+
+.upload-notification.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.upload-notification.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close-notification {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+.success .close-notification {
+    color: #155724;
+}
+
+.error .close-notification {
+    color: #721c24;
+}
+
+.notification-container {
+    margin: 15px 0;
+}
+
+.notification-container > div {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Modal Notification Styles */
+.modal-notification {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    animation: fadeInDown 0.5s ease-in-out;
+}
+
+.modal-notification.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.modal-notification .message-text {
+    font-weight: 500;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Login Form Styles */
+#login-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+#login-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+#login-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#waybill-login-form input[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Modal Styles */
+.waybill-details h3 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.waybill-details h4 {
+    color: #0073aa;
+    margin-bottom: 10px;
+}
+
+.details-section {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.waybill-details .button {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #0073aa;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.waybill-details .button:hover {
+    background: #005177;
+}
+
+.pod-section .current-pod img {
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pod-success-message {
+    margin: 10px 0;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#waybill-logout-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#waybill-logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* Upload POD Button in Dashboard Table */
+.upload-pod-btn {
+    white-space: normal;
+    min-width: fit-content;
+    background-color: #4CAF50;
+    color: white;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    min-width: 60px;
+    white-space: nowrap;
+    line-height: 1.2;
+    transition: background-color 0.3s ease;
+    line-height: 1.2;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    min-height: 50px;
+}
+
+.upload-pod-btn span {
+    display: block;
+    line-height: 1.2;
+}
+
+.upload-pod-btn:hover {
+    background-color: #45a049;
+}
+
+.goods-table input.cartons {
+    width: 80px;
+    text-align: center;
+}
+
+/* Google Places Autocomplete styles */
+.pac-container {
+    z-index: 10000;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    font-family: inherit;
+}
+
+.pac-item {
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.pac-item:hover {
+    background-color: #f5f5f5;
+}
+
+.pac-item-selected {
+    background-color: #e8f0fe;
+}
+
+.address-field {
+    position: relative;
+}
+
+.address-field input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.address-field input:focus {
+    border-color: #007cba;
+    outline: none;
+    box-shadow: 0 0 0 1px #007cba;
+}
+
+/* Quick Search Styles */
+.quick-search-container {
+    margin: 20px 0;
+    padding: 15px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#dashboard-waybill-search {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#dashboard-waybill-search:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 1px #0073aa;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    z-index: 1000;
+    display: none;
+}
+
+.notification.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.notification.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Hide original header and navigation when on Waybill Dashboard */
+body.waybill-dashboard-active header,
+body.waybill-dashboard-active .site-navigation {
+    display: none !important;
+}
+
+/* Login Modal Styles */
+#waybill-login-modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#waybill-login-modal .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+#waybill-login-modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+
