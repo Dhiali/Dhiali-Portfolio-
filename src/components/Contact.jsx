@@ -136,7 +136,7 @@ export function Contact() {
             </motion.a>
 
             <motion.a
-              href="./cv/CV.pdf"
+              href="https://dhiali.github.io/Dhiali-Portfolio-/cv/CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
