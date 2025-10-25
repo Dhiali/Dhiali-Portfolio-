@@ -7,13 +7,13 @@ const caseStudies = [
     title: "Blooming Engagement: Designing a Gamified Treasure Hunt for Rocking the Daisies",
     description: "Rocking the Daisies needed to sustain off-season engagement. As Lead UX Designer, I created a gamified Online Treasure Hunt where users unlocked real-world rewards. This end-to-end project extended the festival's brand and fostered a year-round community.",
     tags: ["Mobile Design", "Design & Prototyping", "User Research"],
-    pdfUrl: "https://dhiali.github.io/Dhiali-Portfolio-/case-studies/Rockingthedaisies.pdf" // Your PDF file
+    pdfUrl: "https://drive.google.com/file/d/1I8Z203DPlbyH00lOYNgC_OOZl-nSN2qD/view?usp=sharing" // Your PDF file
   },
   {
     title: "Visualizing Resilience: A Data-Driven Journey Through Grief",
     description: "As the sole UX designer and data storyteller, I transformed the intangible journey of grief into a tangible data narrative. I designed and built an interactive dashboard that visualizes personal metrics across mind, body, and soul, revealing patterns of resilience and healing. The final prototype, built in Figma, serves as an empathetic tool for self-reflection, telling a silent story of recovery.",
     tags: ["UX/UI Design & Prototyping", "Research & Synthesis", "Data Visualization"],
-    pdfUrl: "https://dhiali.github.io/Dhiali-Portfolio-/case-studies/Grief.pdf"
+    pdfUrl: "https://drive.google.com/file/d/15-64HNDgEktB681e1aGxAXkEkchhErwb/view?usp=sharing"
   }
   // Add more case studies as needed
 ];
