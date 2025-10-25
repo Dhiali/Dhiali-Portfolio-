@@ -136,7 +136,7 @@ export function Contact() {
             </motion.a>
 
             <motion.a
-              href="https://drive.google.com/uc?export=download&id=1Lmo3nP8BJse5x4n25keXAFF1Mz3r5oIS"
+              href="https://drive.google.com/file/d/1Lmo3nP8BJse5x4n25keXAFF1Mz3r5oIS/view"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
