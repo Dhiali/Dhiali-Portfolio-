@@ -7,13 +7,15 @@ const caseStudies = [
     title: "Blooming Engagement: Designing a Gamified Treasure Hunt for Rocking the Daisies",
     description: "Rocking the Daisies needed to sustain off-season engagement. As Lead UX Designer, I created a gamified Online Treasure Hunt where users unlocked real-world rewards. This end-to-end project extended the festival's brand and fostered a year-round community.",
     tags: ["Mobile Design", "Design & Prototyping", "User Research"],
-    pdfUrl: "https://drive.google.com/file/d/1I8Z203DPlbyH00lOYNgC_OOZl-nSN2qD/view" // Your PDF file
+    pdfUrl: "/case-studies/Rockingthedaisies.pdf", // Local PDF file
+    filename: "Rocking-the-Daisies-Case-Study.pdf"
   },
   {
     title: "Visualizing Resilience: A Data-Driven Journey Through Grief",
     description: "As the sole UX designer and data storyteller, I transformed the intangible journey of grief into a tangible data narrative. I designed and built an interactive dashboard that visualizes personal metrics across mind, body, and soul, revealing patterns of resilience and healing. The final prototype, built in Figma, serves as an empathetic tool for self-reflection, telling a silent story of recovery.",
     tags: ["UX/UI Design & Prototyping", "Research & Synthesis", "Data Visualization"],
-    pdfUrl: "https://drive.google.com/file/d/15-64HNDgEktB681e1aGxAXkEkchhErwb/view"
+    pdfUrl: "/case-studies/Grief.pdf", // Local PDF file
+    filename: "Grief-Data-Visualization-Case-Study.pdf"
   }
   // Add more case studies as needed
 ];
@@ -95,18 +97,16 @@ export function UXWork({ onNavigate }) {
                     ))}
                   </div>
 
-                  {/* View PDF Button */}
+                  {/* Download PDF Button */}
                   <motion.a
                     href={study.pdfUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    download={study.filename}
                     className="inline-flex items-center gap-2 px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <span className="text-sm">VIEW CASE STUDY</span>
+                    <span className="text-sm">DOWNLOAD CASE STUDY</span>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </motion.a>

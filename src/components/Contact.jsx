@@ -136,9 +136,8 @@ export function Contact() {
             </motion.a>
 
             <motion.a
-              href="https://drive.google.com/file/d/1Lmo3nP8BJse5x4n25keXAFF1Mz3r5oIS/view"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/cv/dhiali-cv.pdf.pdf"
+              download="Dhiali-CV.pdf"
               className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
