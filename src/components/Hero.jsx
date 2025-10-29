@@ -93,7 +93,7 @@ export function Hero() {
               </div>
             </motion.div>
 
-            {/* PORTFOLIO Text - Overlaid on top */}
+            {/* PORTFOLIO Text - Overlaid on top - TEST CHANGE */}
             <div className="relative z-10 flex items-center justify-center w-full">
               <motion.h1
                 className="text-7xl xs:text-8xl sm:text-9xl md:text-[8rem] lg:text-[10rem] xl:text-[12rem] 2xl:text-[14rem] tracking-tighter leading-none"
