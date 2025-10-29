@@ -42,18 +42,18 @@ export function Hero() {
 
       {/* Main content */}
       <motion.div
-        className="relative z-10 w-full h-full flex items-center justify-center px-4 sm:px-6 lg:px-8"
+        className="relative z-10 w-full h-full flex items-center justify-center px-6 sm:px-8 lg:px-12"
         style={{ 
           opacity: useTransform(scrollYProgress, [0.15, 0.5], [1, 0]),
           scale: useTransform(scrollYProgress, [0.15, 0.5], [1, 0.8])
         }}
       >
-        <div className="relative w-full max-w-7xl mx-auto">
+        <div className="relative w-full max-w-7xl mx-auto h-full flex items-center justify-center">
           {/* Container for stacked text and image */}
-          <div className="relative flex items-center justify-center">
+          <div className="relative flex items-center justify-center w-full h-full">
             {/* Center Image - Behind text */}
             <motion.div
-              className="absolute left-[52%] top-[36%] -translate-x-1/2 -translate-y-1/2 z-0"
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -63,8 +63,8 @@ export function Hero() {
               }}
               style={{ y: imageY }}
             >
-              <div className="relative w-full max-w-[500px] sm:w-[60vw] md:w-[50vw] lg:w-[40vw] xl:w-[35vw] mx-auto">
-                {/* Image container with aspect ratio (647) */}
+              <div className="relative w-80 xs:w-96 sm:w-[28rem] md:w-[32rem] lg:w-[36rem] xl:w-[40rem] 2xl:w-[44rem]">
+                {/* Image container with aspect ratio (647/445) */}
                 <div className="relative aspect-[647/445] overflow-hidden border-2 border-primary/30">
                   {/* Texture overlay */}
                   <div
@@ -82,13 +82,13 @@ export function Hero() {
                     <img
                       src={portraitImage}
                       alt="Dhiali Chetty"
-                      className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 rounded-xl"
+                      className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                       style={{ objectPosition: "40% center" }}
                     />
                   </motion.div>
 
                   {/* Corner accent */}
-                  <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-primary" />
+                  <div className="absolute top-0 right-0 w-12 h-12 sm:w-16 sm:h-16 border-t-2 border-r-2 border-primary" />
                 </div>
               </div>
             </motion.div>
@@ -96,7 +96,7 @@ export function Hero() {
             {/* PORTFOLIO Text - Overlaid on top */}
             <div className="relative z-10 flex items-center justify-center w-full">
               <motion.h1
-                className="text-[40vw] xs:text-[32vw] sm:text-[20vw] md:text-[18vw] lg:text-[16vw] xl:text-[14vw] tracking-tighter leading-none"
+                className="text-7xl xs:text-8xl sm:text-9xl md:text-[8rem] lg:text-[10rem] xl:text-[12rem] 2xl:text-[14rem] tracking-tighter leading-none"
                 style={{
                   fontWeight: 700,
                   mixBlendMode: "difference",
@@ -142,13 +142,13 @@ export function Hero() {
 
           {/* Date Range */}
           <motion.div
-            className="absolute -bottom-12 sm:-bottom-16 md:-bottom-20 left-1/2 -translate-x-1/2 whitespace-nowrap"
+            className="absolute bottom-8 sm:bottom-12 md:bottom-16 lg:bottom-20 left-1/2 -translate-x-1/2 whitespace-nowrap"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
           >
             <p
-              className="text-[10px] xs:text-xs sm:text-sm md:text-base tracking-[0.3em] text-muted-foreground mt-2 mb-2"
+              className="text-sm sm:text-base md:text-lg tracking-[0.3em] text-muted-foreground"
               style={{ fontWeight: 400 }}
             >
               2024 — PRESENT
