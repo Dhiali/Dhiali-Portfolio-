@@ -63,7 +63,7 @@ export function Hero() {
               }}
               style={{ y: imageY }}
             >
-              <div className="relative w-[80vw] xs:w-[70vw] sm:w-[60vw] md:w-[50vw] lg:w-[40vw] xl:w-[35vw] max-w-[647px]">
+              <div className="relative w-full max-w-[500px] sm:w-[60vw] md:w-[50vw] lg:w-[40vw] xl:w-[35vw] mx-auto">
                 {/* Image container with aspect ratio (647) */}
                 <div className="relative aspect-[647/445] overflow-hidden border-2 border-primary/30">
                   {/* Texture overlay */}
@@ -82,7 +82,7 @@ export function Hero() {
                     <img
                       src={portraitImage}
                       alt="Dhiali Chetty"
-                      className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                      className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 rounded-xl"
                       style={{ objectPosition: "40% center" }}
                     />
                   </motion.div>
@@ -96,7 +96,7 @@ export function Hero() {
             {/* PORTFOLIO Text - Overlaid on top */}
             <div className="relative z-10 flex items-center justify-center w-full">
               <motion.h1
-                className="text-[25vw] xs:text-[22vw] sm:text-[20vw] md:text-[18vw] lg:text-[16vw] xl:text-[14vw] tracking-tighter leading-none"
+                className="text-[40vw] xs:text-[32vw] sm:text-[20vw] md:text-[18vw] lg:text-[16vw] xl:text-[14vw] tracking-tighter leading-none"
                 style={{
                   fontWeight: 700,
                   mixBlendMode: "difference",
@@ -148,7 +148,7 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.8 }}
           >
             <p
-              className="text-base tracking-[0.3em] text-muted-foreground"
+              className="text-[10px] xs:text-xs sm:text-sm md:text-base tracking-[0.3em] text-muted-foreground mt-2 mb-2"
               style={{ fontWeight: 400 }}
             >
               2024 — PRESENT
