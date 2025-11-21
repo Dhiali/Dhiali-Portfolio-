@@ -1,11 +1,11 @@
 import { motion, useScroll, useTransform } from 'motion/react';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 // Import all collage images
 import clothsImg from "../assets/cloths .jpg";
 import cultureImg from "../assets/culture.jpg";
 import familyImg from "../assets/family .jpg";
-import family2Img from "../assets/family2.jpg";
+import teamworkImg from "../assets/teamwork.jpg";
 import filmImg from "../assets/film .jpg";
 import jortsImg from "../assets/jorts .jpg";
 import makingClothsImg from "../assets/making cloths .jpg";
@@ -16,114 +16,78 @@ import streetware4Img from "../assets/steetware4.jpg";
 import streetware2Img from "../assets/streetware 2.jpg";
 import streetwareImg from "../assets/streetware.jpg";
 import streetware3Img from "../assets/streetware3.jpg";
-import teamworkImg from "../assets/teamwork.jpg";
+import family2Img from "../assets/family2.jpg";
 
-// Collage images array with positioning and animation data
-const collageImages = [
-  { src: clothsImg, x: 15, y: 5, rotation: -8, scale: 0.7, delay: 0.1, zIndex: 1 },
-  { src: cultureImg, x: 70, y: 10, rotation: 12, scale: 0.8, delay: 0.3, zIndex: 2 },
-  { src: familyImg, x: 25, y: 25, rotation: -15, scale: 0.6, delay: 0.5, zIndex: 3 },
-  { src: family2Img, x: 57, y: 30, rotation: 10, scale: 0.9, delay: 0.7, zIndex: 1 },
-  { src: filmImg, x: 10, y: 45, rotation: 18, scale: 0.5, delay: 0.9, zIndex: 2 },
-  { src: jortsImg, x: 85, y: 50, rotation: -12, scale: 0.7, delay: 1.1, zIndex: 3 },
-  { src: makingClothsImg, x: 35, y: 55, rotation: 8, scale: 0.6, delay: 1.3, zIndex: 1 },
-  { src: outdoorsImg, x: 5, y: 20, rotation: -20, scale: 0.8, delay: 1.5, zIndex: 2 },
-  { src: photoImg, x: 60, y: 60, rotation: 15, scale: 0.5, delay: 1.7, zIndex: 3 },
-  { src: photoshootImg, x: 90, y: 2, rotation: -10, scale: 0.6, delay: 1.9, zIndex: 1 },
-  { src: streetware4Img, x: 20, y: 65, rotation: 25, scale: 0.7, delay: 2.1, zIndex: 2 },
-  { src: streetware2Img, x: 75, y: 58, rotation: -5, scale: 0.6, delay: 2.3, zIndex: 3 },
-  { src: streetwareImg, x: 50, y: 6, rotation: 12, scale: 1, delay: 2.5, zIndex: 1 },
-  { src: streetware3Img, x: 95, y: 18, rotation: -18, scale: 0.7, delay: 2.7, zIndex: 2 },
-  { src: teamworkImg, x: 90, y: 78, rotation: 8, scale: 0.6, delay: 2.9, zIndex: 3 },
+
+
+// Images array for horizontal scrollable container
+const images = [
+  { src: clothsImg, alt: "Cloths" },
+  { src: cultureImg, alt: "Culture" },
+  { src: familyImg, alt: "Family" },
+  { src: teamworkImg, alt: "Teamwork" },
+  { src: filmImg, alt: "Film" },
+  { src: jortsImg, alt: "Jorts" },
+  { src: makingClothsImg, alt: "Making Cloths" },
+  { src: outdoorsImg, alt: "Outdoors" },
+  { src: photoImg, alt: "Photo" },
+  { src: photoshootImg, alt: "Photoshoot" },
+  { src: streetware4Img, alt: "Streetware 4" },
+  { src: streetware2Img, alt: "Streetware 2" },
+  { src: streetwareImg, alt: "Streetware" },
+  { src: streetware3Img, alt: "Streetware 3" },
+  { src: family2Img, alt: "Family 2"},
 ];
 
 export function PromiseLand() {
   const containerRef = useRef(null);
+  const scrollContainerRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"],
   });
 
-  // Parallax effects for different image layers
-  const parallax1 = useTransform(scrollYProgress, [0, 1], [0, -100]);
-  const parallax2 = useTransform(scrollYProgress, [0, 1], [0, 50]);
-  const parallax3 = useTransform(scrollYProgress, [0, 1], [0, -150]);
-  const parallax4 = useTransform(scrollYProgress, [0, 1], [0, 75]);
+  // Drag handlers for horizontal scroll
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
+    setScrollLeft(scrollContainerRef.current.scrollLeft);
+    scrollContainerRef.current.style.cursor = 'grabbing';
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.style.cursor = 'grab';
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.style.cursor = 'grab';
+    }
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging || !scrollContainerRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollContainerRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // Scroll speed multiplier
+    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+
 
   return (
-    <section ref={containerRef} className="relative min-h-screen bg-background overflow-hidden">
+    <section ref={containerRef} className="relative bg-background overflow-hidden py-20 lg:py-32">
       {/* Full width intro section */}
-      <div className="relative min-h-screen">
-        {/* Dynamic Collage Background */}
-        <div className="absolute inset-0 z-0">
-          {collageImages.map((img, index) => {
-            // Apply different parallax effects based on zIndex for depth
-            const parallaxY = img.zIndex === 1 ? parallax1 : 
-                             img.zIndex === 2 ? parallax2 : 
-                             img.zIndex === 3 ? parallax3 : parallax4;
-            
-            return (
-              <motion.div
-                key={index}
-                className="absolute w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72 overflow-hidden"
-                style={{
-                  left: `${img.x}%`,
-                  top: `${img.y}%`,
-                  transform: `translate(-50%, -50%) rotate(${img.rotation}deg)`,
-                  y: parallaxY,
-                  zIndex: -img.zIndex,
-                }}
-                initial={{ 
-                  opacity: 0, 
-                  scale: 0,
-                  rotate: img.rotation + 360
-                }}
-                whileInView={{ 
-                  opacity: 0.8, 
-                  scale: img.scale,
-                  rotate: img.rotation
-                }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 1.5,
-                  delay: img.delay,
-                  ease: [0.6, 0.01, 0.05, 0.95],
-                }}
-                whileHover={{ 
-                  scale: img.scale * 1.15, 
-                  rotate: img.rotation + 10,
-                  opacity: 1,
-                  zIndex: -1,
-                  transition: { duration: 0.4 }
-                }}
-              >
-                <motion.img
-                  src={img.src}
-                  alt=""
-                  className="w-full h-full object-cover transition-all duration-500 border-2 border-primary/20 shadow-lg"
-                  style={{
-                    filter: "grayscale(70%) contrast(1.2) brightness(0.9)",
-                  }}
-                  whileHover={{ 
-                    filter: "grayscale(0%) contrast(1.3) brightness(1.1)",
-                    transition: { duration: 0.4 }
-                  }}
-                />
-                {/* Artistic overlay for depth and cohesion */}
-                <div 
-                  className="absolute inset-0 pointer-events-none transition-opacity duration-500"
-                  style={{
-                    background: `linear-gradient(${45 + img.rotation}deg, 
-                      rgba(245, 230, 211, 0.1) 0%, 
-                      transparent 50%, 
-                      rgba(139, 69, 19, 0.1) 100%)`,
-                    mixBlendMode: "overlay"
-                  }}
-                />
-              </motion.div>
-            );
-          })}
-        </div>
+      <div className="relative pb-20 lg:pb-32">
+
         
         {/* Enhanced Overlay gradient for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-background/30 via-background/10 to-background/50" />
@@ -148,8 +112,8 @@ export function PromiseLand() {
           />
         </div>
 
-        {/* Content overlay - positioned to the right */}
-        <div className="absolute inset-0 flex items-center justify-center sm:justify-end p-4 sm:p-8 lg:p-16 z-10">
+        {/* Content container - positioned to the right */}
+        <div className="relative flex flex-col items-center sm:items-end justify-start p-6 sm:p-12 lg:p-20 pt-16 sm:pt-20 lg:pt-24 z-10 min-h-screen">
           <motion.div
             className="max-w-lg lg:max-w-xl text-center sm:text-right w-full sm:w-auto"
             initial={{ opacity: 0, x: 30 }}
@@ -172,7 +136,7 @@ export function PromiseLand() {
             </h2>
 
             {/* Three quote blocks - Left, Center, Right */}
-            <div className="w-full mb-6 lg:mb-12">
+            <div className="w-full mb-8 lg:mb-16">
               <div className=" flex flex-row flex items-center justify-center gap-2 sm:gap-3 lg:gap-4 w-full">
                 {/* Left Block */}
                 <div className="flex-1 bg-primary-foreground/95 backdrop-blur-sm p-4 sm:p-6 lg:p-8 aspect-square flex items-center justify-center">
@@ -197,7 +161,90 @@ export function PromiseLand() {
               </div>
             </div>
 
-            
+            {/* Horizontal Scrollable Image Container */}
+            <motion.div
+              className="w-full mt-12 lg:mt-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <div 
+                ref={scrollContainerRef}
+                className="flex gap-4 overflow-x-auto overflow-y-hidden scrollbar-hide cursor-grab active:cursor-grabbing pb-4"
+                style={{
+                  scrollbarWidth: 'none',
+                  msOverflowStyle: 'none',
+                  WebkitScrollbar: { display: 'none' },
+                  overflowX: 'auto',
+                  overflowY: 'hidden'
+                }}
+                onMouseDown={handleMouseDown}
+                onMouseLeave={handleMouseLeave}
+                onMouseUp={handleMouseUp}
+                onMouseMove={handleMouseMove}
+              >
+                {images.map((image, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex-shrink-0 relative group cursor-pointer"
+                    style={{ width: '256px', height: '220px' }}
+                    whileHover={{ 
+                      scale: 1.1,
+                      zIndex: 10,
+                      transition: { duration: 0.3 }
+                    }}
+                    whileTap={{ 
+                      scale: 1.15,
+                      transition: { duration: 0.2 }
+                    }}
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ 
+                      duration: 0.6, 
+                      delay: index * 0.1,
+                      ease: "easeOut"
+                    }}
+                  >
+                    <div 
+                      className="overflow-hidden rounded-lg border-2 border-primary/20 shadow-lg group-hover:border-primary/40 transition-all duration-300"
+                      style={{ width: '256px', height: '820px' }}
+                    >
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="transition-all duration-500 grayscale-[70%] group-hover:grayscale-0 group-hover:scale-110"
+                        draggable="false"
+                        style={{
+                          filter: "contrast(1.2) brightness(0.9)",
+                          width: '256px',
+                          height: '220px',
+                          objectFit: 'cover',
+                          objectPosition: 'center'
+                        }}
+                      />
+                      {/* Overlay for better visual effect */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-300" />
+                    </div>
+                    
+                    {/* Optional label */}
+                    <div className="absolute bottom-2 left-2 right-2">
+                      <p className="text-primary-foreground text-xs font-medium bg-background/80 backdrop-blur-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {image.alt}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              
+              {/* Scroll indicator */}
+              <div className="flex justify-center mt-4">
+                <p className="text-muted-foreground text-xs tracking-wider">
+                  ← DRAG TO SCROLL →
+                </p>
+              </div>
+            </motion.div>
 
             {/* Corner label */}
             <div className="mt-4 text-primary-foreground text-xs lg:text-sm tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>

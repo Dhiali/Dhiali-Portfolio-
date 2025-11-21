@@ -4,6 +4,13 @@ import { ArrowLeft } from 'lucide-react';
 // Case Studies Data - Add your case studies here
 const caseStudies = [
   {
+    title: "EziFix: Handyman Accessibility App Research & Planning",
+    description: "EziFix's design process began with deep empathy and user-centered research, immersing ourselves in the daily realities of both handymen and homeowners. We conducted extensive qualitative and quantitative studies to understand the handyman's struggle while also uncovering the homeowner anxieties. This empathic understanding revealed critical insights that shaped our entire solution framework. The research ensured every design decision addressed real user needs rather than assumptions.",
+    tags: ["Mobile app design", "UI/UX", "Figma", "Handyman", "Houseowner", "Accessibility", "empathy", "problem solving"],
+    pdfUrl: "/case-studies/EziFixResearch&Planning.pdf", // Add your PDF file path
+    filename: "EziFixResearch&Planning-Case-Study.pdf"
+  },
+  {
     title: "Blooming Engagement: Designing a Gamified Treasure Hunt for Rocking the Daisies",
     description: "Rocking the Daisies needed to sustain off-season engagement. As Lead UX Designer, I created a gamified Online Treasure Hunt where users unlocked real-world rewards. This end-to-end project extended the festival's brand and fostered a year-round community.",
     tags: ["Mobile Design", "Design & Prototyping", "User Research"],
@@ -74,42 +81,59 @@ export function UXWork({ onNavigate }) {
                 whileHover={{ y: -5 }}
               >
                 {/* Content */}
-                <div className="p-6">
-                  <h3 
-                    className="text-xl mb-2 group-hover:text-primary transition-colors"
-                    style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                  >
-                    {study.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-                    {study.description}
-                  </p>
-                  
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {study.tags.map((tag, tagIndex) => (
-                      <span 
-                        key={tagIndex}
-                        className="px-2 py-1 text-xs bg-muted text-muted-foreground rounded"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                <div className="p-6 flex gap-4">
+                  {/* Text Content */}
+                  <div className={index === 0 ? "w-1/2" : "flex-1"}>
+                    <h3 
+                      className="mb-4 group-hover:text-primary transition-colors"
+                      style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '2rem', fontWeight: 'bold', letterSpacing: '0.05em' }}
+                    >
+                      {study.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                      {study.description}
+                    </p>
+                    
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {study.tags.map((tag, tagIndex) => (
+                        <span 
+                          key={tagIndex}
+                          className="px-2 py-1 text-sm bg-muted text-muted-foreground rounded"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
 
-                  {/* Download PDF Button */}
-                  <motion.a
-                    href={study.pdfUrl}
-                    download={study.filename}
-                    className="inline-flex items-center gap-2 px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span className="text-sm">DOWNLOAD CASE STUDY</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                  </motion.a>
+                    {/* View PDF Button */}
+                    <motion.a
+                      href={study.pdfUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <span className="text-sm">VIEW CASE STUDY</span>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </motion.a>
+                  </div>
+                  
+                  {/* Image for EziFix project - positioned on the right */}
+                  {index === 0 && (
+                    <div className="w-1/2 flex justify-center items-start pt-2">
+                      <div className="h-28 w-36 overflow-hidden flex-shrink-0">
+                        <img 
+                          src="/case-studies/term-1-cover.png" 
+                          alt="EziFix Cover"
+                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}
