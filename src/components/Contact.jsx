@@ -114,30 +114,11 @@ export function Contact() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1, delay: 0.8 }}
           >
-            <motion.div
-              className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group cursor-default"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Instagram className="w-8 h-8" />
-              <span className="tracking-wider" style={{ fontWeight: 500 }}>INSTAGRAM</span>
-            </motion.div>
-
+            
             <motion.a
-              href="https://linkedin.com/in/dhaanya"
+              href="/cv/DhialiChettyCV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Linkedin className="w-8 h-8" />
-              <span className="tracking-wider" style={{ fontWeight: 500 }}>LINKEDIN</span>
-            </motion.a>
-
-            <motion.a
-              href="/cv/dhiali-cv.pdf.pdf"
-              download="Dhiali-CV.pdf"
               className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -158,17 +139,7 @@ export function Contact() {
               <span className="tracking-wider" style={{ fontWeight: 500 }}>BEHANCE</span>
             </motion.a>
 
-            <motion.a
-              href="https://facebook.com/dhaanya"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Facebook className="w-8 h-8" />
-              <span className="tracking-wider" style={{ fontWeight: 500 }}>FACEBOOK</span>
-            </motion.a>
+        
           </motion.div>
         </motion.div>
       </motion.div>

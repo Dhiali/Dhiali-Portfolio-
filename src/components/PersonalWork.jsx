@@ -147,17 +147,7 @@ export function PersonalWork({ onNavigate }) {
                 </h1>
               </motion.div>
 
-              {/* Description - Bottom */}
-              <motion.div
-                className="bg-[#f5e6d3] p-6 sm:p-8 lg:p-10 max-w-md ml-auto"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.8 }}
-              >
-                <p className="text-[#0a0a0a] text-base sm:text-lg leading-relaxed">
-                  Experimental projects and personal explorations celebrating cultural heritage through digital art. Blending traditional motifs with contemporary design to create meaningful experiences.
-                </p>
-              </motion.div>
+            
 
               {/* Corner Label - Bottom Right */}
               <motion.div 
@@ -166,12 +156,7 @@ export function PersonalWork({ onNavigate }) {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1 }}
               >
-                <p 
-                  className="text-[#f5e6d3] text-sm tracking-[0.3em]"
-                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                >
-                  PERSONAL WORK
-                </p>
+               
               </motion.div>
             </div>
           </motion.div>
