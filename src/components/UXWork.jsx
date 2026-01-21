@@ -8,58 +8,58 @@ const caseStudies = [
     title: "EziFix: Handyman Accessibility App Research & Planning",
     description: "EziFix's design process began with deep empathy and user-centered research, immersing ourselves in the daily realities of both handymen and homeowners. We conducted extensive qualitative and quantitative studies to understand the handyman's struggle while also uncovering the homeowner anxieties. This empathic understanding revealed critical insights that shaped our entire solution framework. The research ensured every design decision addressed real user needs rather than assumptions.",
     tags: ["Mobile app design", "UI/UX", "Figma", "Handyman", "Houseowner", "Accessibility", "empathy", "problem solving"],
-   pdfUrl: `${process.env.PUBLIC_URL}/case-studies/EziFixResearch&Planning-Case-Study.pdf`,
+    pdfUrl: "./case-studies/EziFixResearch&Planning.pdf",
     filename: "EziFixResearch&Planning-Case-Study.pdf",
-    image: "/case-studies/term-1-cover.png"
+    image: "./case-studies/term-1-cover.png"
   },
   {
     title: "EziFix: Handyman Accessibility App Visual Execution",
     description: "The visual execution of EziFix translates our empathy-driven research into user-friendly interfaces that solve real problems for both handymen and homeowners. For handymen, we created intuitive tools while homeowners enjoy transparent trust-building interfaces. Our design system even extends to health protection through a smartwatch companion for noise safety monitoring. Every visual element from the verification badges to the live tracking was crafted to build confidence, reduce anxiety and create a seamless experience that addresses the specific pain points uncovered during our research phase.",
     tags: ["Handyman", "UI/UX", "Prototype", "Accessibility Guidelines", "Visual Design"],
-    pdfUrl: "/case-studies/HandymanVisualExecution.pdf",
+    pdfUrl: "./case-studies/HandymanVisualExecution.pdf",
     filename: "Handyman-Visual-Execution-Case-Study.pdf",
-    image: "/case-studies/VisualE mockup.png"
+    image: "./case-studies/VisualE mockup.png"
   },
   {
     title: "MediLink : Service Design App",
     description: "MediLink is a centralized healthcare application that transforms the hospital experience for patients with and without medical aid. By integrating NFC technology, MediLink automates every step of a hospital visit  from booking and check-in to payments, prescriptions and results.",
     tags: ["User Research", "Service Design", "Hospital", "Mobile App", "South Africa"],
-    pdfUrl: "/case-studies/MediLinkCaseStudy.pdf",
+    pdfUrl: "./case-studies/MediLinkCaseStudy.pdf",
     filename: "MediLink-Case-Study.pdf",
-    image: "/case-studies/MediLink mockup.png"
+    image: "./case-studies/MediLink mockup.png"
   },
   {
     title: "Shaya Ecommerce Website: Technology For Social Good",
     description: "The Shaya e-commerce site embraces a warm, modern and accessible design that reflects South Africa’s vibrant informal market culture. Its visual style combines earthy tones, such as soft browns and copper accents, with clean white space to create a sense of trust and approachability.",
     tags: ["Collaboration", "Research", "Local", "Strategy & Planning", "Mobile App", "Responsive Design", "E-Commerce"],
-    pdfUrl: "/case-studies/CaseStudySHAYA.pdf",
+    pdfUrl: "./case-studies/CaseStudySHAYA.pdf",
     filename: "CaseStudySHAYA.pdf",
-    image: "/case-studies/Shaya mockup.png"
+    image: "./case-studies/Shaya mockup.png"
   },
   {
     title: "RecoverTogether: An Addiction Recovery Companion App",
     description: "Designed to empower individuals in recovery from drug addiction, this app provides a secure, all-in-one platform for managing the journey to sobriety. It combines personalized goal-setting, an on-demand toolkit of coping mechanisms and a supportive community to help users build resilience, track progress and maintain motivation. The design prioritizes empathy & accessibility creating a trusted digital space that fosters a lasting positive change.",
     tags: ["Product Strategy", "Digital Health", "Behavioral Design", "Addiction Recovery", "Community Platform", "Social Impact"],
-    pdfUrl: "/case-studies/RecoverTogether.pdf",
+    pdfUrl: "./case-studies/RecoverTogether.pdf",
     filename: "RecoverTogether-Case-Study.pdf",
-    image: "/case-studies/Recover.png"
+    image: "./case-studies/Recover.png"
   },
   {
     title: "Blooming Engagement: Gamified Treasure Hunt",
     description: "Rocking the Daisies needed to sustain off-season engagement. As Lead UX Designer, I created a gamified Online Treasure Hunt where users unlocked real-world rewards.",
     tags: ["Mobile Design", "Gamification", "Interaction Design", "Festival Experience"],
-    pdfUrl: "/case-studies/Rockingthedaisies.pdf",
+    pdfUrl: "./case-studies/Rockingthedaisies.pdf",
     filename: "Rocking-the-Daisies-Case-Study.pdf",
-    image: "/case-studies/RTD.png" // Add your image path
+    image: "./case-studies/RTD.png" // Add your image path
   },
   // ...existing code...
     {
       title: "Visualizing Resilience: Grief Data Journey",
       description: "In the aftermath of loss, it's difficult to perceive progress. Emotions and recovery feel chaotic, making it hard to see the gradual return to stability or identify the activities that genuinely aid healing. This personal reflection is a designed personal data dashboard that transforms daily metrics into a visual narrative of resilience. By tracking interconnected aspects of well-being, the dashboard illustrates the ups and downs of the healing journey, highlighting the subtle correlations between emotional, physical and mental recovery to foster self-awareness and hope.",
       tags: ["Data Visualization", "UX Research", "Grief", "Mental Health", "Charts", "Recovery"],
-      pdfUrl: "/case-studies/Grief.pdf",
+      pdfUrl: "./case-studies/Grief.pdf",
       filename: "Grief-Data-Visualization-Case-Study.pdf",
-      image: "/case-studies/Grief.png" // Add your image path
+      image: "./case-studies/Grief.png" // Add your image path
     },
   
 ];

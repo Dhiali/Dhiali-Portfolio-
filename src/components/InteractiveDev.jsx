@@ -10,7 +10,7 @@ const developmentProjects = [
 			'FaceOff is an interactive React application that transforms data from the SuperHero API into a dynamic exploration of comic book characters. The platform features a dashboard of powerful heroes and villains, a detailed comparison tool with radar charts, and historical timelines, providing fans and data enthusiasts a unique way to settle debates and explore superhero statistics.',
 		tags: ['Axios', 'Bootstrap', 'Chart.js', 'CSS3', 'Node.js', 'React', 'Javascript'],
 		githubUrl: 'https://github.com/Dhiali/super-dashboard.git',
-		image: '/case-studies/faceoff mockup.png',
+		image: './case-studies/faceoff mockup.png',
 	},
 	{
 		title: 'The Drunken Giraffe',
@@ -27,7 +27,7 @@ const developmentProjects = [
 			'JWT Authentication',
 		],
 		githubUrl: 'https://github.com/AngievR05/mern_liquor',
-		image: '/case-studies/drunken mock up.png',
+		image: './case-studies/drunken mock up.png',
 	},
 	{
 		title: 'Housemate - Smart Household Management System',
@@ -35,7 +35,7 @@ const developmentProjects = [
 			'HouseMate is a full-stack PWA that streamlines shared living by managing tasks, bills, events and communication with role-based access control. Built with React, Node.js/Express and MySQL it features real-time updates, secure authentication and household analytics. Previously deployed on Google Cloud Run and Azure Static Web Apps it now runs locally for demonstrations.',
 		tags: ['React', 'Tailwind CSS', 'Vite', 'Javascript', 'HTML5', 'CSS3', 'Node/Express.js', 'MySQL', 'JWT', 'Google Cloud', 'Microsoft Azure'],
 		githubUrl: 'https://github.com/Dhiali/housemate',
-		image: '/case-studies/HM mockup.png',
+		image: './case-studies/HM mockup.png',
 	},
 	// Add more projects as needed
 ];
