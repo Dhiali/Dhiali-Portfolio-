@@ -111,7 +111,7 @@ export function Contact() {
           >
             
             <motion.a
-              href="/cv/DhialiChettyCV.pdf"
+              href="/Dhiali_Chetty_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
