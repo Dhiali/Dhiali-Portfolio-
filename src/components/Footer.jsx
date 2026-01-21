@@ -41,7 +41,7 @@ export function Footer() {
                   href="mailto:info@dhialidigitaldesigns.co.za" 
                   className="hover:text-primary transition-colors"
                 >
-                  info@dhialidigitaldesigns.co.za
+                  dhialichetty0@gmail.com
                 </a>
               </li>
             </ul>
