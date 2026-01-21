@@ -8,7 +8,7 @@ const caseStudies = [
     title: "EziFix: Handyman Accessibility App Research & Planning",
     description: "EziFix's design process began with deep empathy and user-centered research, immersing ourselves in the daily realities of both handymen and homeowners. We conducted extensive qualitative and quantitative studies to understand the handyman's struggle while also uncovering the homeowner anxieties. This empathic understanding revealed critical insights that shaped our entire solution framework. The research ensured every design decision addressed real user needs rather than assumptions.",
     tags: ["Mobile app design", "UI/UX", "Figma", "Handyman", "Houseowner", "Accessibility", "empathy", "problem solving"],
-    pdfUrl: "/case-studies/EziFixResearch&Planning.pdf",
+    pdfUrl: "./case-studies/EziFixResearch&Planning-Case-Study.pdf",
     filename: "EziFixResearch&Planning-Case-Study.pdf",
     image: "/case-studies/term-1-cover.png"
   },
