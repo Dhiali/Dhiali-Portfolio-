@@ -16,12 +16,7 @@ export function Contact() {
     {
       type: 'Personal',
       email: 'dhialichetty0@gmail.com',
-      description: 'For personal inquiries and general questions'
-    },
-    {
-      type: 'Business',
-      email: 'info@dhialidigitaldesigns.co.za',
-      description: 'For business proposals and professional projects'
+      description: 'For all inquiries and general questions'
     }
   ];
 
