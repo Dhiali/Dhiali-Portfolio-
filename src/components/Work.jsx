@@ -6,7 +6,6 @@ const categories = [
     id: '1',
     title: 'UX',
     subtitle: 'DESIGN',
-    description: 'Welcome to my UX case studies. Here, I break down my design process for each project, highlighting how I use research to inform design decisions, create prototypes to test ideas, and iterate based on feedback.I\'m passionate about creating products that users love and that meet business objectives. Explore the case studies to see how I\'ve achieved this in various contexts.',
     image: 'https://images.unsplash.com/photo-1521391406205-4a6af174a4c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxVWCUyMGRlc2lnbmVyJTIwd29ya3NwYWNlfGVufDF8fHx8MTc1OTkwMjQ5Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     index: '01',
     route: 'ux-work',
@@ -16,7 +15,6 @@ const categories = [
     id: '2',
     title: 'INTERACTIVE',
     subtitle: 'DEVELOPMENT',
-    description: 'CREATIVE CODING AND FRONTEND DEVELOPMENT PROJECTS FEATURING ADVANCED ANIMATIONS, IMMERSIVE WEB EXPERIENCES, AND CUTTING-EDGE TECHNOLOGIES. EXPLORING THE BOUNDARIES OF MODERN WEB DEVELOPMENT.',
     image: 'https://images.unsplash.com/photo-1593086784152-b060f8109e0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXIlMjBjb2RpbmclMjBzY3JlZW58ZW58MXx8fHwxNzU5OTAyNDkyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
 
     index: '02',
@@ -25,9 +23,8 @@ const categories = [
   },
   {
     id: '3',
-    title: 'PERSONAL',
+    title: 'CLIENT',
     subtitle: 'WORK',
-    description: 'EXPERIMENTAL PROJECTS AND PERSONAL EXPLORATIONS SHOWN THROUGH DIGITAL ART AND DESIGN. MERGING TECHNICALITY WITH INNOVATION TO CREATE MEANINGFUL DIGITAL EXPERIENCES.',
     image: 'https://images.unsplash.com/photo-1688818228656-cccc0a933b30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpc3RpYyUyMGNyZWF0aXZlJTIwd29ya3xlbnwxfHx8fDE3NTk5MDI0OTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
   
     index: '03',

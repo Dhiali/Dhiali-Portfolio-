@@ -41,7 +41,8 @@ export function Footer() {
                   href="mailto:info@dhialidigitaldesigns.co.za" 
                   className="hover:text-primary transition-colors"
                 >
-                  dhialichetty0@gmail.com
+                  dhialichetty0@gmail.com <br/>
+                  Founder of @dhialidigitaldesigns | Creative working at the intersection of culture, design & events. 
                 </a>
               </li>
             </ul>
@@ -57,6 +58,7 @@ export function Footer() {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <p className="text-muted-foreground text-xs">
+            Proudly serving the culture & events space.<br/>
             © {currentYear} Dhiali Chetty. All rights reserved.
           </p>
         
