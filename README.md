@@ -8,31 +8,37 @@ A responsive portfolio website built with React and Vite, deployed to GitHub Pag
 
 ## 📋 Deployment Setup
 
-This site uses the **gh-pages branch deployment** method.
+This site uses **GitHub Actions** for automated deployment to GitHub Pages.
 
 ### Configure GitHub Pages Settings
 
 1. Go to your repository on GitHub: https://github.com/Dhiali/Dhiali-Portfolio-
 2. Click **Settings** → **Pages** (in the left sidebar)
 3. Under "Build and deployment":
-   - **Source**: Select **Deploy from a branch**
-   - **Branch**: Select **gh-pages** and **/ (root)**
-4. Click **Save**
+   - **Source**: Select **GitHub Actions**
+4. Save the settings
 
 ### Deploy the Site
 
-To deploy updates to your live site:
+**Automatic Deployment (Recommended):**
+
+Simply push your changes to the `main` branch:
+
+```bash
+git add .
+git commit -m "Your changes"
+git push origin main
+```
+
+GitHub Actions will automatically build and deploy your site. Check the Actions tab for deployment status.
+
+**Local Deployment (Alternative):**
 
 ```bash
 npm run deploy
 ```
 
-This command will:
-1. Build your site (`npm run build`)
-2. Push the built files to the `gh-pages` branch
-3. GitHub Pages will automatically serve the updated site
-
-**Note:** The first deployment may take 1-2 minutes to appear. Subsequent updates are usually faster.
+**Note:** Local deployment requires network access to GitHub. If you encounter "Could not resolve host: github.com" errors, use the automatic deployment method instead.
 
 ## 🛠️ Development
 
@@ -53,10 +59,31 @@ npm run build
 
 The built files will be in the `dist/` folder.
 
+## 🔍 Troubleshooting
+
+### Git Issues
+
+If you encounter git-related issues (accidentally committing `node_modules/` or `dist/`, line ending warnings, or push failures), see:
+
+- **[QUICK_FIX_GUIDE.md](./QUICK_FIX_GUIDE.md)** - Step-by-step guide for resolving immediate git issues
+- **[GIT_ISSUES_FIX.md](./GIT_ISSUES_FIX.md)** - Comprehensive guide for fixing common git problems
+- **cleanup-git.sh** - Helper script to check and fix repository issues
+
+Run the cleanup script:
+```bash
+bash cleanup-git.sh
+```
+
+### Common Issues
+
+- **Push rejected (non-fast-forward)**: Your local branch is behind remote. Run `git pull origin main` before pushing.
+- **LF/CRLF warnings**: The `.gitattributes` file handles this automatically. Configure git with `git config --global core.autocrlf true` on Windows.
+- **Accidentally committed node_modules**: See QUICK_FIX_GUIDE.md for removal instructions.
+
 ## 🔧 Tech Stack
 
 - React 18
 - Vite 6
 - Tailwind CSS
 - Radix UI Components
-- GitHub Pages (via gh-pages branch)
+- GitHub Pages (via GitHub Actions)
