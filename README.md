@@ -6,36 +6,33 @@ A responsive portfolio website built with React and Vite, deployed to GitHub Pag
 
 **URL:** https://dhiali.github.io/Dhiali-Portfolio-/
 
-## 📋 Important: After Merging This PR
+## 📋 Deployment Setup
 
-To fix the 404 error, you **MUST** complete these steps after merging:
+This site uses the **gh-pages branch deployment** method.
 
-### 1. Configure GitHub Pages Settings
+### Configure GitHub Pages Settings
 
 1. Go to your repository on GitHub: https://github.com/Dhiali/Dhiali-Portfolio-
 2. Click **Settings** → **Pages** (in the left sidebar)
 3. Under "Build and deployment":
-   - **Source**: Select **GitHub Actions** ⚠️ NOT "Deploy from a branch"
+   - **Source**: Select **Deploy from a branch**
+   - **Branch**: Select **gh-pages** and **/ (root)**
 4. Click **Save**
 
-### 2. Delete the Old gh-pages Branch
+### Deploy the Site
 
-The old `gh-pages` branch is empty and conflicts with the new deployment method:
+To deploy updates to your live site:
 
 ```bash
-git push origin --delete gh-pages
+npm run deploy
 ```
 
-### 3. Trigger Initial Deployment
+This command will:
+1. Build your site (`npm run build`)
+2. Push the built files to the `gh-pages` branch
+3. GitHub Pages will automatically serve the updated site
 
-After merging to `main`, the workflow will automatically run. You can also manually trigger it:
-1. Go to the **Actions** tab
-2. Click "Deploy to GitHub Pages"
-3. Click **Run workflow** → **Run workflow**
-
-### 4. Wait for Deployment
-
-The deployment takes 1-2 minutes. Check the Actions tab to monitor progress.
+**Note:** The first deployment may take 1-2 minutes to appear. Subsequent updates are usually faster.
 
 ## 🛠️ Development
 
@@ -56,14 +53,10 @@ npm run build
 
 The built files will be in the `dist/` folder.
 
-## 📚 More Information
-
-See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions and troubleshooting.
-
 ## 🔧 Tech Stack
 
 - React 18
 - Vite 6
 - Tailwind CSS
 - Radix UI Components
-- GitHub Pages (via GitHub Actions)
+- GitHub Pages (via gh-pages branch)
