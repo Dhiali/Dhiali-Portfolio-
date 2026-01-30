@@ -125,8 +125,7 @@ export function PersonalWork({ onNavigate }) {
                         />
                       ) : study.title === "MediLink : Service Design App"||
      study.title === "NSIAWIN Electrical: Company Profile Design" ||
-     study.title === "La Way Travel Agency: Brand Identity & Logo Design" ||
-     study.title === "Motion Graphics Showcase" ? (
+     study.title === "La Way Travel Agency: Brand Identity & Logo Design" ? (
                         <img 
                           src={study.image} 
                           alt={`${study.title} Cover`}
