@@ -26,8 +26,13 @@ git commit -m "Your changes (without node_modules and dist)"
 # Remove node_modules and dist from git tracking
 git rm -r --cached node_modules/ dist/
 
-# Commit the removal
+# Verify they're removed from staging
+git status
+
+# Add .gitignore to ensure it's tracked
 git add .gitignore
+
+# Commit the removal
 git commit -m "Remove node_modules and dist from git tracking"
 
 # Push the changes
@@ -116,17 +121,20 @@ git config --global core.autocrlf true
 
 ### Refresh Line Endings in Repository
 
+⚠️ **WARNING**: The following commands will discard uncommitted changes. Back up your work first!
+
 If you want to normalize all line endings in your repository:
 
 ```bash
-# Remove all files from git's index
+# IMPORTANT: Commit or backup any uncommitted changes first!
+
+# Remove all files from git's index (but keep them in working directory)
 git rm --cached -r .
 
-# Re-add all files (git will normalize line endings)
-git reset --hard
-
-# Refresh the working directory
+# Re-add all files (git will normalize line endings based on .gitattributes)
 git add .
+
+# Commit the normalized files
 git commit -m "Normalize line endings"
 ```
 
@@ -150,10 +158,11 @@ git diff --cached
 # 1. Check current status
 git status
 
-# 2. Stage only specific files you want
-git add src/
+# 2. Stage only specific files you want (be selective!)
+git add src/components/
 git add package.json
-# Don't use "git add ." blindly!
+git add README.md
+# DON'T use "git add ." - it may add unwanted files
 
 # 3. Review what's staged
 git status

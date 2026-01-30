@@ -3,8 +3,6 @@
 # Git Cleanup Script for Portfolio Repository
 # This script helps clean up accidentally committed node_modules and dist files
 
-set -e  # Exit on error
-
 echo "=========================================="
 echo "Git Repository Cleanup Script"
 echo "=========================================="
@@ -29,8 +27,10 @@ if [ -z "$TRACKED_FILES" ]; then
 else
     echo "⚠ WARNING: Found tracked files in node_modules or dist:"
     echo "$TRACKED_FILES" | head -10
-    if [ $(echo "$TRACKED_FILES" | wc -l) -gt 10 ]; then
-        echo "... and $(echo "$TRACKED_FILES" | wc -l) more files"
+    FILE_COUNT=$(echo "$TRACKED_FILES" | grep -c '^' || echo "0")
+    if [ "$FILE_COUNT" -gt 10 ]; then
+        REMAINING=$((FILE_COUNT - 10))
+        echo "... and $REMAINING more files"
     fi
     echo ""
     
@@ -92,8 +92,11 @@ fi
 
 # Check branch status
 echo "Checking branch status..."
-git fetch origin 2>/dev/null || true
-CURRENT_BRANCH=$(git branch --show-current)
+if ! git fetch origin 2>/dev/null; then
+    echo "⚠ WARNING: Could not fetch from origin. Checking local state only."
+    echo ""
+else
+    CURRENT_BRANCH=$(git branch --show-current)
 if git rev-parse origin/$CURRENT_BRANCH > /dev/null 2>&1; then
     LOCAL=$(git rev-parse HEAD)
     REMOTE=$(git rev-parse origin/$CURRENT_BRANCH)
@@ -113,6 +116,7 @@ if git rev-parse origin/$CURRENT_BRANCH > /dev/null 2>&1; then
     fi
 else
     echo "ℹ Remote branch origin/$CURRENT_BRANCH not found"
+fi
 fi
 echo ""
 
