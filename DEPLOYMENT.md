@@ -41,6 +41,30 @@ The `vite.config.js` file has `base: '/Dhiali-Portfolio-'` which must match your
 ### 5. Wait for Deployment
 After merging to main, wait 1-2 minutes for GitHub Actions to build and deploy.
 
+## Troubleshooting MIME Type Errors
+
+If you see an error like:
+```
+Failed to load module script: Expected a JavaScript-or-Wasm module script but the server responded with a MIME type of "text/jsx"
+```
+
+**This means GitHub Pages is serving source files instead of built files.**
+
+### Solution:
+
+1. **Merge this PR to `main`** - The workflow only runs on the main branch
+2. **Configure GitHub Pages to use GitHub Actions** (see "GitHub Pages Settings" above)
+3. **Delete the old `gh-pages` branch** (see step 2 under "404 Errors")
+4. **Wait for the workflow to complete** - Check the Actions tab
+
+The error occurs because:
+- Source `index.html` references `/src/main.jsx` (only works in dev mode)
+- Built `dist/index.html` references compiled JavaScript bundles (works in production)
+- GitHub Pages must serve the **built** version, not the source version
+
+See `MIME_TYPE_ERROR_ANALYSIS.md` for detailed technical explanation.
+
+
 ## Manual Deployment (Not Recommended)
 
 If you need to manually trigger a deployment:
