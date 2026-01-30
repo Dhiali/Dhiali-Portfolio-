@@ -59,6 +59,26 @@ npm run build
 
 The built files will be in the `dist/` folder.
 
+## 🔍 Troubleshooting
+
+### Git Issues
+
+If you encounter git-related issues (accidentally committing `node_modules/` or `dist/`, line ending warnings, or push failures), see:
+
+- **[GIT_ISSUES_FIX.md](./GIT_ISSUES_FIX.md)** - Comprehensive guide for fixing common git problems
+- **cleanup-git.sh** - Helper script to check and fix repository issues
+
+Run the cleanup script:
+```bash
+bash cleanup-git.sh
+```
+
+### Common Issues
+
+- **Push rejected (non-fast-forward)**: Your local branch is behind remote. Run `git pull origin main` before pushing.
+- **LF/CRLF warnings**: The `.gitattributes` file handles this automatically. Configure git with `git config --global core.autocrlf true` on Windows.
+- **Accidentally committed node_modules**: See GIT_ISSUES_FIX.md for removal instructions.
+
 ## 🔧 Tech Stack
 
 - React 18
