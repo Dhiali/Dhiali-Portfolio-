@@ -134,7 +134,17 @@ export function Contact() {
               <span className="tracking-wider" style={{ fontWeight: 500 }}>BEHANCE</span>
             </motion.a>
 
-        
+            <motion.a
+              href="https://www.linkedin.com/in/dhiali-chetty-b446b8369 "
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Linkedin className="w-8 h-8" />
+              <span className="tracking-wider" style={{ fontWeight: 500 }}>LINKEDIN</span>
+            </motion.a>
           </motion.div>
         </motion.div>
       </motion.div>
