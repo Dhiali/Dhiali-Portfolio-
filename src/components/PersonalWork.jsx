@@ -126,8 +126,7 @@ export function PersonalWork({ onNavigate }) {
                         />
                       ) : study.title === "MediLink : Service Design App"||
      study.title === "NSIAWIN Electrical: Company Profile Design" ||
-     study.title === "La Way Travel Agency: Brand Identity & Logo Design" ||
-     study.title === "Motion Graphics Showcase" ? (
+     study.title === "La Way Travel Agency: Brand Identity & Logo Design" ? (
                         <img 
                           src={study.image} 
                           alt={`${study.title} Cover`}
@@ -184,12 +183,21 @@ export function PersonalWork({ onNavigate }) {
                   >
                     <div className="retreat-card">
                       <div className="card-image">
-                        <img 
-                          src={study.image} 
-                          alt={`${study.title} Cover`}
-                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                          style={{ maxHeight: '90%', maxWidth: '95%' }}
-                        />
+                        {study.title === "Motion Graphics Showcase" ? (
+                          <img 
+                            src={study.image} 
+                            alt={`${study.title} Cover`}
+                            className="object-contain group-hover:scale-105 transition-transform duration-300"
+                            style={{ maxHeight: '90%', maxWidth: '75%', width: 'auto', height: '100%' }}
+                          />
+                        ) : (
+                          <img 
+                            src={study.image} 
+                            alt={`${study.title} Cover`}
+                            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                            style={{ maxHeight: '90%', maxWidth: '95%' }}
+                          />
+                        )}
                       </div>
                       <div className="card-content">
                         <h2 className="card-title">{study.title}</h2>
