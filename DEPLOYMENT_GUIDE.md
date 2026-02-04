@@ -1,5 +1,9 @@
 # Deployment Guide
 
+> **Note:** If you want to deploy this project for your own use (fork/clone for your portfolio), see **[SELF_DEPLOYMENT_GUIDE.md](./SELF_DEPLOYMENT_GUIDE.md)** for a comprehensive step-by-step guide.
+
+This guide is for deploying updates to the original Dhiali portfolio repository.
+
 This portfolio uses **GitHub Actions** for automated deployment to GitHub Pages.
 
 ## How It Works

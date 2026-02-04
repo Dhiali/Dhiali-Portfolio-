@@ -6,7 +6,15 @@ A responsive portfolio website built with React and Vite, deployed to GitHub Pag
 
 **URL:** https://dhiali.github.io/Dhiali-Portfolio-/
 
-## 📋 Deployment Setup
+## 📖 Want to Deploy This Project Yourself?
+
+**👉 See [SELF_DEPLOYMENT_GUIDE.md](./SELF_DEPLOYMENT_GUIDE.md)** for a comprehensive guide on how to:
+- Fork and customize this project for your own portfolio
+- Deploy to GitHub Pages, Netlify, or Vercel
+- Set up from scratch with all prerequisites
+- Troubleshoot common issues
+
+## 📋 Deployment Setup (For this Repository)
 
 This site uses **GitHub Actions** for automated deployment to GitHub Pages.
 
