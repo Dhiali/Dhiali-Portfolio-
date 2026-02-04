@@ -1,4 +1,4 @@
-# Dhiali Chetty Portfolio
+I# Dhiali Chetty Portfolio
 
 A responsive portfolio website built with React and Vite, deployed to GitHub Pages.
 

@@ -41,12 +41,13 @@ const caseStudies = [
     buttonLabel: "VIEW VIDEO"
   },
   {
-    title: "RecoverTogether: An Addiction Recovery Companion App",
-    description: "Designed to empower individuals in recovery from drug addiction, this app provides a secure, all-in-one platform for managing the journey to sobriety. It combines personalized goal-setting, an on-demand toolkit of coping mechanisms and a supportive community to help users build resilience, track progress and maintain motivation. The design prioritizes empathy & accessibility creating a trusted digital space that fosters a lasting positive change.",
-    tags: ["Product Strategy", "Digital Health", "Behavioral Design", "Addiction Recovery", "Community Platform", "Social Impact"],
-    pdfUrl: "./case-studies/RecoverTogether.pdf",
-    filename: "RecoverTogether-Case-Study.pdf",
-    image: "./case-studies/Recover.png"
+    title: "Digital Waybill Management System for Outrite Africa",
+    description: "A comprehensive full-stack web application built as a custom WordPress plugin for Outrite Africa, a logistics company. Transformed entirely paper-based waybill operations into a modern digital solution with automated calculations, Google Maps integration, real-time tracking and role-based access control.Built with PHP, MySQL, JavaScript (jQuery) and integrated with Google Maps Places API and jsPDF for document generation. Features include sequential waybill numbering, POD management, advanced filtering and Excel export capabilities. Duration: 3 months | Role: Full-Stack Developer | Status: Live in Production",
+    tags: ["Full-Stack", "WordPress", "PHP", "MySQL", "Live", "Google Maps API", "jsPDF"],
+    pdfUrl: "./case-studies/waybill-system-des.pdf",
+    filename: "waybill-system-des.pdf",
+    image: "./case-studies/Digital-Waybill-Cover.png",
+    buttonLabel: "VIEW PDF"
   },
   
   
