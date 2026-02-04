@@ -183,7 +183,7 @@ export function PersonalWork({ onNavigate }) {
                   >
                     <div className="retreat-card">
                       <div className="card-image">
-                        {study.title === "Motion Graphics Showcase" ? (
+                        {study.title === "Motion Graphics Showcase" || study.title === "Digital Waybill Management System for Outrite Africa" ? (
                           <img 
                             src={study.image} 
                             alt={`${study.title} Cover`}
