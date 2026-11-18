@@ -181,7 +181,7 @@ export function InteractiveDev({ onNavigate }) {
 												<img
 													src={project.image}
 													alt={project.title + ' Cover'}
-													className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+													className="w-full h-full group-hover:scale-105 transition-transform duration-300"
 													style={{ maxHeight: '90%', maxWidth: '95%' }}
 												/>
 											) : (
@@ -271,6 +271,9 @@ export function InteractiveDev({ onNavigate }) {
 							display: flex;
 							align-items: center;
 							justify-content: center;
+						}
+						.card-image img {
+							object-fit: contain;
 						}
 						.card-content {
 							padding: 24px;
