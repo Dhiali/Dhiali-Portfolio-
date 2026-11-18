@@ -5,6 +5,32 @@ import { useState, useEffect } from 'react';
 // Development Projects Data - Add your GitHub projects here
 const developmentProjects = [
 	{
+		title: 'Zuri Markets',
+		description:
+			'A financial-literacy workspace for new and developing traders, with guided onboarding, market charts and research, paper trading, and trading journals and history. Zuri is an AI trading buddy that explains concepts and proposes plans while users stay in control and confirm every order.',
+		tags: ['Next.js', 'React', 'TypeScript', 'FastAPI', 'Python', 'Supabase', 'PostgreSQL', 'Groq AI', 'Paper Trading'],
+		githubUrl: 'https://github.com/Dhiali/Zuri',
+		liveUrl: 'https://zuri-markets.vercel.app',
+		liveLabel: 'LIVE FIRST MVP',
+		image: './case-studies/zuri-markets-banner.png',
+	},
+	{
+		title: 'Kenetic',
+		description:
+			'A cross-platform mobile application for wellbeing and environmental awareness, built around Focus, Breathe, and Outdoors. Explore guided breathing, focus sessions, nature discovery, saved places, quizzes and challenges, with activity linked to your account.',
+		tags: ['React Native', 'Expo', 'TypeScript', 'Firebase', 'Firestore', 'Cloudflare Workers', 'Gemini AI'],
+		githubUrl: 'https://github.com/Dhiali/Kenetic',
+		image: './case-studies/kenetic-banner.png',
+	},
+	{
+		title: 'Artifax',
+		description:
+			'A desktop inventory and production-management app for multi-location warehouse operations. Track branch stock and low inventory, manage blueprints and recipes, queue and monitor crafting orders, review order history, and administer staff with role-based tools and authenticator-based two-factor verification.',
+		tags: ['React', 'Electron', 'TypeScript', 'ASP.NET Core', 'C#', 'PostgreSQL', 'Entity Framework Core'],
+		githubUrl: 'https://github.com/I-Know-What-You-Committed-Last-Summer/Artifax',
+		image: './case-studies/artifax-banner.png',
+	},
+	{
 		title: 'FaceOff - Superhero Power Comparison API',
 		description:
 			'FaceOff is an interactive React application that transforms data from the SuperHero API into a dynamic exploration of comic book characters. The platform features a dashboard of powerful heroes and villains, a detailed comparison tool with radar charts, and historical timelines, providing fans and data enthusiasts a unique way to settle debates and explore superhero statistics.',
@@ -36,32 +62,6 @@ const developmentProjects = [
 		tags: ['React', 'Tailwind CSS', 'Vite', 'Javascript', 'HTML5', 'CSS3', 'Node/Express.js', 'MySQL', 'JWT', 'Google Cloud', 'Microsoft Azure'],
 		githubUrl: 'https://github.com/Dhiali/housemate',
 		image: './case-studies/HM mockup.png',
-	},
-	{
-		title: 'Zuri Markets',
-		description:
-			'A financial-literacy workspace for new and developing traders, with guided onboarding, market charts and research, paper trading, and trading journals and history. Zuri is an AI trading buddy that explains concepts and proposes plans while users stay in control and confirm every order.',
-		tags: ['Next.js', 'React', 'TypeScript', 'FastAPI', 'Python', 'Supabase', 'PostgreSQL', 'Groq AI', 'Paper Trading'],
-		githubUrl: 'https://github.com/Dhiali/Zuri',
-		liveUrl: 'https://zuri-markets.vercel.app',
-		liveLabel: 'LIVE FIRST MVP',
-		image: './case-studies/zuri-markets-banner.png',
-	},
-	{
-		title: 'Kenetic',
-		description:
-			'A cross-platform mobile application for wellbeing and environmental awareness, built around Focus, Breathe, and Outdoors. Explore guided breathing, focus sessions, nature discovery, saved places, quizzes and challenges, with activity linked to your account.',
-		tags: ['React Native', 'Expo', 'TypeScript', 'Firebase', 'Firestore', 'Cloudflare Workers', 'Gemini AI'],
-		githubUrl: 'https://github.com/Dhiali/Kenetic',
-		image: './case-studies/kenetic-banner.png',
-	},
-	{
-		title: 'Artifax',
-		description:
-			'A desktop inventory and production-management app for multi-location warehouse operations. Track branch stock and low inventory, manage blueprints and recipes, queue and monitor crafting orders, review order history, and administer staff with role-based tools and authenticator-based two-factor verification.',
-		tags: ['React', 'Electron', 'TypeScript', 'ASP.NET Core', 'C#', 'PostgreSQL', 'Entity Framework Core'],
-		githubUrl: 'https://github.com/I-Know-What-You-Committed-Last-Summer/Artifax',
-		image: './case-studies/artifax-banner.png',
 	},
 	// Add more projects as needed
 ];
@@ -119,15 +119,10 @@ export function InteractiveDev({ onNavigate }) {
 						{/* Professional Summary */}
 						<div className="max-w-4xl mx-auto text-left mb-16">
 							<p className="text-muted-foreground leading-relaxed text-base mb-6">
-								I am a junior Interactive Developer with a passion for creating 
-                intuitive and impactful digital experiences. I’m highly motivated 
-                with a strong foundation in full-stack JavaScript development, cloud 
-                deployment and user-centric design. Proficient in building dynamic, 
-                data-driven web applications using the MERN stack (MongoDB, Express.js, 
-                React, Node.js) and relational databases with SQL.
+								I am a junior Interactive Developer creating user-focused web, mobile and desktop experiences. My projects range from Zuri Markets, an AI trading buddy and financial-literacy workspace, to Kenetic, a wellbeing mobile app, and Artifax, a desktop inventory and production-management system.
 							</p>
 							<p className="text-muted-foreground leading-relaxed text-base mb-8">
-								I'm experienced in applying software development lifecycle (SDLC) principles, from design and database normalisation to secure deployment on cloud platforms like AWS and Azure. A collaborative team player adept at using Git/GitHub for version control and passionate about creating intuitive, secure and scalable digital experiences. Through my studio, Dhiali Digital Designs, I specialize in UX/UI design, branding and full-stack web development. I’m driven to build digital solutions that are both innovative and user-focused.
+								I bring together UX/UI design and full-stack development, working with React, TypeScript, Python, C# and a range of databases and cloud services. My work explores AI integrations, interactive data, secure authentication and practical tools that make complex tasks easier to navigate. I value collaboration and thoughtful design throughout the development process.
 							</p>
 
 							{/* Call-to-Action Section */}
@@ -399,7 +394,7 @@ export function InteractiveDev({ onNavigate }) {
 											Programming Languages & Markup
 										</h4>
 										<div className="text-xs text-gray-300 leading-relaxed">
-											JavaScript (ES6+), TypeScript, PHP, SQL, HTML5, CSS3
+											JavaScript (ES6+), TypeScript, Python, C#, PHP, SQL, HTML5, CSS3
 										</div>
 									</div>
 
@@ -412,8 +407,9 @@ export function InteractiveDev({ onNavigate }) {
 											Frontend Development
 										</h4>
 										<div className="text-xs text-gray-300 leading-relaxed">
-											React, Vue.js, Angular, React Router, Component-Based Architecture, Dynamic
-											Data Visualisation, Responsive Web Design
+											React, Next.js, Vue.js, Angular, React Router, Tailwind CSS, Bootstrap,
+											Chart.js, Component-Based Architecture, Dynamic Data Visualisation,
+											Responsive Web Design, Progressive Web Apps
 										</div>
 									</div>
 
@@ -426,8 +422,8 @@ export function InteractiveDev({ onNavigate }) {
 											Backend Development
 										</h4>
 										<div className="text-xs text-gray-300 leading-relaxed">
-											Node.js, Express.js, RESTful API Development, Middleware, Session Management,
-											Authentication & Authorization
+											Node.js, Express.js, FastAPI, ASP.NET Core, Entity Framework Core, Axios,
+											RESTful API Development, Middleware, Session Management, Authentication & Authorization
 										</div>
 									</div>
 
@@ -440,7 +436,7 @@ export function InteractiveDev({ onNavigate }) {
 											Databases
 										</h4>
 										<div className="text-xs text-gray-300 leading-relaxed">
-											MySQL, PostgreSQL, MongoDB, Data Modelling, Advanced SQL, Performance
+											MySQL, PostgreSQL, MongoDB, Firebase, Firestore, Supabase, Data Modelling, Advanced SQL, Performance
 											Optimisation
 										</div>
 									</div>
@@ -454,7 +450,7 @@ export function InteractiveDev({ onNavigate }) {
 											Cloud & Deployment
 										</h4>
 										<div className="text-xs text-gray-300 leading-relaxed">
-											AWS, Azure, Google Cloud Platform, Heroku, Application Deployment, Auto-Scaling,
+											AWS, Azure, Google Cloud Platform, Cloudflare Workers, Heroku, Application Deployment, Auto-Scaling,
 											Performance Monitoring
 										</div>
 									</div>
@@ -468,7 +464,7 @@ export function InteractiveDev({ onNavigate }) {
 											Development Tools & Methodologies
 										</h4>
 										<div className="text-xs text-gray-300 leading-relaxed">
-											Git, GitHub, npm, Agile/Scrum, Software Development Lifecycle, User-Centric
+											Git, GitHub, npm, Vite, Agile/Scrum, Software Development Lifecycle, User-Centric
 											Design, Algorithmic Problem-Solving, ERD Creation
 										</div>
 									</div>
@@ -482,8 +478,17 @@ export function InteractiveDev({ onNavigate }) {
 											Security & Networking
 										</h4>
 										<div className="text-xs text-gray-300 leading-relaxed">
-											Encryption, Secure Authentication, SQL Injection Prevention, Prepared Statements,
+											Encryption, Secure Authentication, JWT Authentication, SQL Injection Prevention, Prepared Statements,
 											Secure Session Management, CORS
+										</div>
+									</div>
+
+									<div className="bg-gray-900 rounded-lg p-3">
+										<h4 className="text-sm font-bold mb-2" style={{ color: '#dc2626' }}>
+											Mobile, Desktop & AI
+										</h4>
+										<div className="text-xs text-gray-300 leading-relaxed">
+											React Native, Expo, Electron, Groq AI, Gemini AI
 										</div>
 									</div>
 
