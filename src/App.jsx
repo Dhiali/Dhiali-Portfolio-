@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { WordCarousel } from './components/WordCarousel';
@@ -14,12 +14,29 @@ import { PersonalWork } from './components/PersonalWork';
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [showSplash, setShowSplash] = useState(true);
+  const homeScrollPosition = useRef(0);
+  const previousPage = useRef(currentPage);
   const carouselWords = ['UX DESIGN', 'FRONTEND DEVELOPMENT', 'CREATIVE CODING', 'USER RESEARCH', 'CULTURAL DESIGN', 'INNOVATION', 'STORYTELLING', 'DIGITAL EXPERIENCES'];
 
   const handleNavigate = (route) => {
+    if (currentPage === 'home' && route !== 'home') {
+      homeScrollPosition.current = window.scrollY;
+    }
+
     setCurrentPage(route);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  useLayoutEffect(() => {
+    if (currentPage === 'home' && previousPage.current !== 'home') {
+      // Restore where the user was on the home page after leaving a work section.
+      window.scrollTo(0, homeScrollPosition.current);
+    } else if (currentPage !== 'home') {
+      // Start each work section at its top without animating away from the saved home position.
+      window.scrollTo(0, 0);
+    }
+
+    previousPage.current = currentPage;
+  }, [currentPage]);
 
   const handleSplashComplete = () => {
     setShowSplash(false);
@@ -58,5 +75,3 @@ export default function App() {
     </div>
   );
 }
-
-
