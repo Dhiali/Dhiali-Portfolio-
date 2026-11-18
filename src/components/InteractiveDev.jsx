@@ -61,7 +61,7 @@ const developmentProjects = [
 			'A desktop inventory and production-management app for multi-location warehouse operations. Track branch stock and low inventory, manage blueprints and recipes, queue and monitor crafting orders, review order history, and administer staff with role-based tools and authenticator-based two-factor verification.',
 		tags: ['React', 'Electron', 'TypeScript', 'ASP.NET Core', 'C#', 'PostgreSQL', 'Entity Framework Core'],
 		githubUrl: 'https://github.com/I-Know-What-You-Committed-Last-Summer/Artifax',
-		image: 'https://raw.githubusercontent.com/I-Know-What-You-Committed-Last-Summer/Artifax/main/ProjectHeader.png',
+		image: './case-studies/artifax-banner.png',
 	},
 	// Add more projects as needed
 ];
