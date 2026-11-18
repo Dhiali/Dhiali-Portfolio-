@@ -37,6 +37,31 @@ const developmentProjects = [
 		githubUrl: 'https://github.com/Dhiali/housemate',
 		image: './case-studies/HM mockup.png',
 	},
+	{
+		title: 'Zuri Markets',
+		description:
+			'A financial-literacy workspace for new and developing traders, with guided onboarding, market charts and research, paper trading, and trading journals and history. Its AI companion explains concepts and proposes plans while users stay in control and confirm every order.',
+		tags: ['Next.js', 'React', 'TypeScript', 'FastAPI', 'Python', 'Supabase', 'PostgreSQL', 'Paper Trading'],
+		githubUrl: 'https://github.com/Dhiali/Zuri',
+		liveUrl: 'https://zuri-markets.vercel.app',
+		image: 'https://raw.githubusercontent.com/Dhiali/Zuri/main/docs/zuri-header.png',
+	},
+	{
+		title: 'Kenetic',
+		description:
+			'A cross-platform wellbeing and environmental-awareness app built around Focus, Breathe, and Outdoors. Explore guided breathing, focus sessions, nature discovery, saved places, quizzes and challenges, with activity linked to your account.',
+		tags: ['React Native', 'Expo', 'TypeScript', 'Firebase', 'Firestore', 'Cloudflare Workers', 'Gemini AI'],
+		githubUrl: 'https://github.com/Dhiali/Kenetic',
+		image: 'https://raw.githubusercontent.com/Dhiali/Kenetic/develop/assets/images/keneticHeader.png',
+	},
+	{
+		title: 'Artifax',
+		description:
+			'A desktop inventory and production-management app for multi-location warehouse operations. Track branch stock and low inventory, manage blueprints and recipes, queue and monitor crafting orders, review order history, and administer staff with role-based tools and authenticator-based two-factor verification.',
+		tags: ['React', 'Electron', 'TypeScript', 'ASP.NET Core', 'C#', 'PostgreSQL', 'Entity Framework Core'],
+		githubUrl: 'https://github.com/I-Know-What-You-Committed-Last-Summer/Artifax',
+		image: 'https://raw.githubusercontent.com/I-Know-What-You-Committed-Last-Summer/Artifax/main/ProjectHeader.png',
+	},
 	// Add more projects as needed
 ];
 
@@ -489,5 +514,3 @@ export function InteractiveDev({ onNavigate }) {
 		</div>
 	);
 }
-
-
