@@ -45,7 +45,7 @@ const developmentProjects = [
 		githubUrl: 'https://github.com/Dhiali/Zuri',
 		liveUrl: 'https://zuri-markets.vercel.app',
 		liveLabel: 'LIVE FIRST MVP',
-		image: 'https://raw.githubusercontent.com/Dhiali/Zuri/main/docs/zuri-header.png',
+		image: './case-studies/zuri-markets-banner.png',
 	},
 	{
 		title: 'Kenetic',
