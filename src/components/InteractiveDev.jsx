@@ -40,16 +40,17 @@ const developmentProjects = [
 	{
 		title: 'Zuri Markets',
 		description:
-			'A financial-literacy workspace for new and developing traders, with guided onboarding, market charts and research, paper trading, and trading journals and history. Its AI companion explains concepts and proposes plans while users stay in control and confirm every order.',
-		tags: ['Next.js', 'React', 'TypeScript', 'FastAPI', 'Python', 'Supabase', 'PostgreSQL', 'Paper Trading'],
+			'A financial-literacy workspace for new and developing traders, with guided onboarding, market charts and research, paper trading, and trading journals and history. Zuri is an AI trading buddy that explains concepts and proposes plans while users stay in control and confirm every order.',
+		tags: ['Next.js', 'React', 'TypeScript', 'FastAPI', 'Python', 'Supabase', 'PostgreSQL', 'Groq AI', 'Paper Trading'],
 		githubUrl: 'https://github.com/Dhiali/Zuri',
 		liveUrl: 'https://zuri-markets.vercel.app',
+		liveLabel: 'LIVE FIRST MVP',
 		image: 'https://raw.githubusercontent.com/Dhiali/Zuri/main/docs/zuri-header.png',
 	},
 	{
 		title: 'Kenetic',
 		description:
-			'A cross-platform wellbeing and environmental-awareness app built around Focus, Breathe, and Outdoors. Explore guided breathing, focus sessions, nature discovery, saved places, quizzes and challenges, with activity linked to your account.',
+			'A cross-platform mobile application for wellbeing and environmental awareness, built around Focus, Breathe, and Outdoors. Explore guided breathing, focus sessions, nature discovery, saved places, quizzes and challenges, with activity linked to your account.',
 		tags: ['React Native', 'Expo', 'TypeScript', 'Firebase', 'Firestore', 'Cloudflare Workers', 'Gemini AI'],
 		githubUrl: 'https://github.com/Dhiali/Kenetic',
 		image: 'https://raw.githubusercontent.com/Dhiali/Kenetic/develop/assets/images/keneticHeader.png',
@@ -163,11 +164,11 @@ export function InteractiveDev({ onNavigate }) {
 
 					{/* Projects Grid */}
 					<div className="flex justify-center">
-						<div className="flex flex-col sm:flex-row gap-6 sm:gap-3 lg:gap-4 w-full max-w-7xl px-4 sm:overflow-x-auto">
+						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl px-4">
 							{developmentProjects.map((project, index) => (
 								<motion.div
 									key={index}
-									className="group border border-border hover:border-primary transition-all duration-300 w-full sm:flex-1 sm:min-w-0"
+									className="group border border-border hover:border-primary transition-all duration-300 min-w-0"
 									initial={{ opacity: 0, y: 50 }}
 									whileInView={{ opacity: 1, y: 0 }}
 									viewport={{ once: true }}
@@ -231,7 +232,7 @@ export function InteractiveDev({ onNavigate }) {
 														whileHover={{ scale: 1.05 }}
 														whileTap={{ scale: 0.95 }}
 													>
-														DEMO
+														{project.liveLabel || 'DEMO'}
 													</motion.a>
 												)}
 											</div>
