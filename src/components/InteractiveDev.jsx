@@ -164,7 +164,7 @@ export function InteractiveDev({ onNavigate }) {
 
 					{/* Projects Grid */}
 					<div className="flex justify-center">
-						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl px-4">
+						<div className="development-projects-grid gap-6 w-full max-w-7xl px-4">
 							{developmentProjects.map((project, index) => (
 								<motion.div
 									key={index}
@@ -243,6 +243,20 @@ export function InteractiveDev({ onNavigate }) {
 						</div>
 					</div>
 					<style jsx>{`
+						.development-projects-grid {
+							display: grid;
+							grid-template-columns: minmax(0, 1fr);
+						}
+						@media (min-width: 768px) {
+							.development-projects-grid {
+								grid-template-columns: repeat(2, minmax(0, 1fr));
+							}
+						}
+						@media (min-width: 1024px) {
+							.development-projects-grid {
+								grid-template-columns: repeat(3, minmax(0, 1fr));
+							}
+						}
 						.retreat-card {
 							display: flex;
 							flex-direction: column;
