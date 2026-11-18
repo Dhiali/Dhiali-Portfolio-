@@ -53,7 +53,7 @@ const developmentProjects = [
 			'A cross-platform mobile application for wellbeing and environmental awareness, built around Focus, Breathe, and Outdoors. Explore guided breathing, focus sessions, nature discovery, saved places, quizzes and challenges, with activity linked to your account.',
 		tags: ['React Native', 'Expo', 'TypeScript', 'Firebase', 'Firestore', 'Cloudflare Workers', 'Gemini AI'],
 		githubUrl: 'https://github.com/Dhiali/Kenetic',
-		image: 'https://raw.githubusercontent.com/Dhiali/Kenetic/develop/assets/images/keneticHeader.png',
+		image: './case-studies/kenetic-banner.png',
 	},
 	{
 		title: 'Artifax',
